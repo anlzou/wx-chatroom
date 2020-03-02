@@ -1,0 +1,25 @@
+{
+  "name": "wxchatroom",
+  "version": "1.0.0",
+  "description": "用微信小程序搭建的chatromm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anlzou/wxchatroom.git"
+  },
+  "keywords": [
+    "chatroom",
+    "node",
+    "vue",
+    "socket"
+  ],
+  "author": "anlzou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anlzou/wxchatroom/issues"
+  },
+  "homepage": "https://github.com/anlzou/wxchatroom#readme"
+}
