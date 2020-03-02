@@ -17,9 +17,9 @@
 
 # 介绍
 非常简单的socket.io聊天室，同时支持微信小程序终端，和浏览器客户端。
-# 上手指南
-环境：Windows10		
-demo图	
+# 演示
+- 环境：Windows10		
+- demo图		
 ![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面.PNG)
 ![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面.PNG)
 ![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面.PNG)
