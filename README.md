@@ -20,10 +20,10 @@
 # 上手指南
 环境：Windows10		
 demo图	
-![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面)
-![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面)
-![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面)
-![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面)
+![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面.PNG)
+![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面.PNG)
+![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面.PNG)
+![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面.PNG)
 
 
 ## 安装要求
