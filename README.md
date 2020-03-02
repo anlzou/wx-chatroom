@@ -5,7 +5,7 @@
     - [安装要求](#安装要求)
     - [安装步骤](#安装步骤)
 - [文件结构](#文件结构)
-- [部署](#部署)
+- [运行](#运行)
 - [使用到的框架](#使用到的框架)
 - [贡献者](#贡献者)
 - [版本控制](#版本控制)
@@ -17,14 +17,8 @@
 
 # 介绍
 非常简单的socket.io聊天室，同时支持微信小程序终端，和浏览器客户端。
-# 演示
+# 上手指南
 - 环境：Windows10		
-- demo图		
-![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面.PNG)
-![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面.PNG)
-![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面.PNG)
-![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面.PNG)
-
 
 ## 安装要求
 - 懂得安装node以及使用其自带的npm工具
@@ -35,18 +29,26 @@
 	- 浏览器
 
 ## 安装步骤
-一步一步地说明怎么去搭建环境，怎么让项目跑起来。首先你需要：
 1. [安装：node](https://www.runoob.com/nodejs/nodejs-install-setup.html)
-1. [安装：微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
-1. chrome浏览器
+2. 使用控制台cmd，到WebSocketServer目录下输入以下命令：
+```
+npm install
+```
+3. [安装：微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+4. chrome浏览器
 
 # 文件结构
 [catalogue.txt](https://github.com/anlzou/wxchatroom/blob/master/catalogue.txt)
 
-# 部署
+# 运行
 1. 克隆代码到本地后，进入WebSocketServer目录执行node index.js。
 2. 使用 “微信开发者工具” 将 weapp_demo 目录打开，运行调试即可。
 3. 浏览器可以访问WebSocketServer/chat目录中index.html文件。
+4. 运行demo图		
+![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面.PNG)
+![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面.PNG)
+![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面.PNG)
+![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面.PNG)
 
 # 使用到的框架
 1. socket.io - 通信框架
