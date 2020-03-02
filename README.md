@@ -5,9 +5,6 @@
     - [安装要求](#安装要求)
     - [安装步骤](#安装步骤)
 - [文件结构](#文件结构)
-- [测试](#测试)
-    - [分解为端对端测试](#分解为端对端测试)
-    - [代码风格测试](#代码风格测试)
 - [部署](#部署)
 - [使用到的框架](#使用到的框架)
 - [贡献者](#贡献者)
@@ -21,7 +18,13 @@
 # 介绍
 非常简单的socket.io聊天室，同时支持微信小程序终端，和浏览器客户端。
 # 上手指南
-环境：Windows10
+环境：Windows10		
+demo图	
+![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面)
+![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面)
+![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面)
+![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面)
+
 
 ## 安装要求
 - 懂得安装node以及使用其自带的npm工具
@@ -38,25 +41,12 @@
 1. chrome浏览器
 
 # 文件结构
-[catalogue.md](https://github.com/anlzou/wxchatroom/blob/master/catalogue.txt)
-
-# 测试
-解释说明一下如何运行该系统的自动测试部分。
-
-## 分解为端对端测试
-解释这些测试是什么以及为什么要做这些测试
-1. 我是个栗子
-1. 我也是个栗子
-1. 我是栗子的哥哥
-
-## 代码风格测试
-解释这些测试是什么以及为什么要做这些测试
-1. 我是个栗子
-1. 我也是个栗子
-1. 我是栗子的哥哥
+[catalogue.txt](https://github.com/anlzou/wxchatroom/blob/master/catalogue.txt)
 
 # 部署
-对以上的安装步骤进行补充说明，描述如何在在线环境中安装该项目。
+1. 克隆代码到本地后，进入WebSocketServer目录执行node index.js。
+2. 使用 “微信开发者工具” 将 weapp_demo 目录打开，运行调试即可。
+3. 浏览器可以访问WebSocketServer/chat目录中index.html文件。
 
 # 使用到的框架
 1. socket.io - 通信框架
@@ -74,20 +64,11 @@ anlzou
 # 版权说明
 > 该项目签署了xxx 授权许可，详情请参阅 *LICENSE.md*
 
+# 鸣谢
+参考[wx-socket.io](https://github.com/w469849848/wx-socket.io)
 
 # 更新日志
 ## V1.0.0 版本，2020-3-2
-1. 新功能：aaaaaaaaa
-1. 新功能：bbbbbbbbb
-1. 修改：ccccccccc
-1. 修复：ddddddddd
-
-
-
-1.运行在node环境，并使用socket.io框架。
-2.克隆代码到本地后，进入WebSocketServer目录执行node index.js。
-3.使用 “微信开发者工具” 将 weapp_demo 目录打开，运行调试即可。
-4.浏览器可以访问WebSocketServer/chat目录中index.html文件。
-5.页面顶部会显示当前聊天室聊天的人数，以及会列出当前聊天人的名字。
-6.页面右上角会显示当前聊天人的名字和退出聊天室的按钮。
-7.服务器会监控加入/退出聊天室的人的名称和并广播给其他人显示在页面上。
+1. 新功能：
+2. 新功能：
+3. 修改：
