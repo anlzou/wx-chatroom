@@ -38,7 +38,7 @@
 1. chrome浏览器
 
 # 文件结构
-[catalogue.md](https://github.com/anlzou/wxchatroom/blob/master/catalogue.md)
+[catalogue.md](https://github.com/anlzou/wxchatroom/blob/master/catalogue.txt)
 
 # 测试
 解释说明一下如何运行该系统的自动测试部分。
