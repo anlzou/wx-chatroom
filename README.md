@@ -33,12 +33,12 @@
 
 ## 安装步骤
 一步一步地说明怎么去搭建环境，怎么让项目跑起来。首先你需要：
-1. [安装：node](#https://www.runoob.com/nodejs/nodejs-install-setup.html)
-1. [安装：微信开发者工具](#(https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+1. [安装：node](https://www.runoob.com/nodejs/nodejs-install-setup.html)
+1. [安装：微信开发者工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
 1. chrome浏览器
 
 # 文件结构
-[catalogue.md](#https://github.com/anlzou/wxchatroom/blob/master/catalogue.md)
+[catalogue.md](https://github.com/anlzou/wxchatroom/blob/master/catalogue.md)
 
 # 测试
 解释说明一下如何运行该系统的自动测试部分。
