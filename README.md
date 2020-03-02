@@ -85,12 +85,10 @@
 对以上的安装步骤进行补充说明，描述如何在在线环境中安装该项目。
 
 # 使用到的框架
-1. Dropwizard - Web框架
-1. Maven - 依赖属性管理
-1. ROME - 生成RSS源
+1. socket.io - 通信框架
 
 # 贡献者
-请阅读 *CONTRIBUTING.md* 查阅为该项目做出贡献的开发者。
+> 请阅读 *CONTRIBUTING.md* 查阅为该项目做出贡献的开发者。
 
 # 版本控制
 *git*
@@ -100,20 +98,11 @@ anlzou
 *您也可以在贡献者名单中参看所有参与该项目的开发者。*
 
 # 版权说明
-该项目签署了MIT 授权许可，详情请参阅 *LICENSE.md*
+> 该项目签署了xxx 授权许可，详情请参阅 *LICENSE.md*
 
-# 鸣谢
-该项目参考了XXX的XXX       
-灵感来源于XXX      
-感谢xxx的支持
 
 # 更新日志
-## V1.0.0 版本，yyyy-mm-dd
-1. 新功能：aaaaaaaaa
-1. 新功能：bbbbbbbbb
-1. 修改：ccccccccc
-1. 修复：ddddddddd
-## V2.0.0 版本，yyyy-mm-dd
+## V1.0.0 版本，2020-3-2
 1. 新功能：aaaaaaaaa
 1. 新功能：bbbbbbbbb
 1. 修改：ccccccccc
