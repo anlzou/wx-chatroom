@@ -19,52 +19,26 @@
 <!-- GFM-TOC -->
 
 # 介绍
-这里再写一段骚气又精准的话描述你的项目吧。
+非常简单的socket.io聊天室，同时支持微信小程序终端，和浏览器客户端。
 # 上手指南
-写几句这样的话概括接下来的内容：以下指南将帮助你在本地机器上安装和运行该项目，进行开发和测试。关于如何将该项目部署到在线环境，请参考部署小节。
+环境：Windows10
 
 ## 安装要求
-列出运行该项目必须要具备的条件以及必须要安装的软件，最好给出具体的安装步骤。
-1. 必须安装我
-1. 我也必须安装
-1. 安装我也是必须的
+- 懂得安装node以及使用其自带的npm工具
+- 懂得微信开发工具的使用，比如项目生成与调试	
+- 需要安装的软件
+	- node
+	- 微信开发者工具
+	- 浏览器
 
 ## 安装步骤
 一步一步地说明怎么去搭建环境，怎么让项目跑起来。首先你需要：
-1. 干这件事
-1. 干那件事
-1. 继续干这件事
-
-......一直到完成。最后阐述安装完成后的情况，展示下Demo
+1. [安装：node](#https://www.runoob.com/nodejs/nodejs-install-setup.html)
+1. [安装：微信开发者工具](#(https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)
+1. chrome浏览器
 
 # 文件结构
-```
-├── Readme.md                   // help
-├── app                         // 应用
-├── config                      // 配置
-│   ├── default.json
-│   ├── dev.json                // 开发环境
-│   ├── experiment.json         // 实验
-│   ├── index.js                // 配置控制
-│   ├── local.json              // 本地
-│   ├── production.json         // 生产环境
-│   └── test.json               // 测试环境
-├── data
-├── doc                         // 文档
-├── environment
-├── gulpfile.js
-├── locales
-├── logger-service.js           // 启动日志配置
-├── node_modules
-├── package.json
-├── app-service.js              // 启动应用配置
-├── static                      // web静态资源加载
-│   └── initjson
-│       └── config.js           // 提供给前端的配置
-├── test
-├── test-service.js
-└── tools
-```
+[catalogue.md](#https://github.com/anlzou/wxchatroom/blob/master/catalogue.md)
 
 # 测试
 解释说明一下如何运行该系统的自动测试部分。
@@ -107,3 +81,13 @@ anlzou
 1. 新功能：bbbbbbbbb
 1. 修改：ccccccccc
 1. 修复：ddddddddd
+
+
+
+1.运行在node环境，并使用socket.io框架。
+2.克隆代码到本地后，进入WebSocketServer目录执行node index.js。
+3.使用 “微信开发者工具” 将 weapp_demo 目录打开，运行调试即可。
+4.浏览器可以访问WebSocketServer/chat目录中index.html文件。
+5.页面顶部会显示当前聊天室聊天的人数，以及会列出当前聊天人的名字。
+6.页面右上角会显示当前聊天人的名字和退出聊天室的按钮。
+7.服务器会监控加入/退出聊天室的人的名称和并广播给其他人显示在页面上。
