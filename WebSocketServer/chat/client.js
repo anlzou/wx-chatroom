@@ -1,3 +1,5 @@
+//客户端程序
+
 (function () {
 	var d = document,
 	w = window,
