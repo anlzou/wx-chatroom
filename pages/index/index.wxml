@@ -1,16 +1,27 @@
 <!--index.wxml-->
 <view class="container" hidden="{{isshowgreeting ? true:false}}">
-	<view class="greeting">
-  <text class="text_center">聊天室登录</text>
-		<text class="nick-label">请输入用户名</text>
-		<input type="text" class="nickname" value="{{nickname}}" auto-focus="true" bindinput="inputNameEvent" />
-		<button type="primary" class="type-btn" bindtap="enterRoom">进入聊天室</button>
+	<view class='header'>
+		<text>聊天室登录</text>
 	</view>
+	<form bindsubmit="formSubmit">
+		<view class='section'>
+			<text>用户名</text>
+			<input type='text' placeholder='请输入用户名' value="{{nickname}}" auto-focus="true" bindinput="inputNameEvent" />
+		</view>
+		<view class='section'>
+			<text>密码</text>
+			<input password='true' placeholder='请输入密码' name="pwd" value='123' />
+		</view>
+		<view class='button'>
+			<button type='primary' form-type='submit' bindtap="enterRoom">登录</button>
+		</view>
+	</form>
 </view>
+
 <view class="chatbox" id="chatbox" hidden="{{isshowchatbox ? true:false}}" style="width: 100%;">
 	<view class="chatbox-title">
 		<view>您正在多人聊天室中</view>
-		<view bindtap="logout"><text>当前用户：{{nickname}}</text> | <text>退出</text></view>
+		<view bindtap="logout"><text>当前用户: {{nickname}}</text> | <text>退出</text></view>
 	</view>
 	<view id="doc">
 		<view id="chat">
