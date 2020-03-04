@@ -274,7 +274,7 @@ div.robot>div,
 section.robot>div,
 section.service>div,
 section.top-message>div{
-  max-width: 225px;
+  max-width: 340px;
   display: inline-block;
   position:relative;
   padding:12px;
@@ -337,16 +337,16 @@ section.user {
   text-align:right;
 }
 section.user>div {
-  max-width: 225px;
+  max-width: 340px;
   position:relative;
   display: inline-block;
   padding:8px;
   margin:0 10px 0 12px;
   text-align:left;
   border-radius:10px;
-  color:#fff;
+  color:#333;
   box-shadow: inset 0 0 1px #007aff;
-  background-color:#007aff;
+  background-color:#9ee759;
   vertical-align: top;
   word-break: break-all;
 }
@@ -405,7 +405,7 @@ header {
   font-weight:normal;
 	font-size:14px;
 	color:#f60;
-	 max-width: 60px;
+	 max-width: 100px;
     height: 36px;
 	overflow: hidden;
 	float: right;
@@ -417,7 +417,7 @@ header {
   font-weight:700;
 }
 .service>span{
-    max-width: 60px;
+    max-width: 100px;
     height: 36px;
 	/*
     background: url("https://i.alipayobjects.com/i/ecmng/png/201404/2O35FCjByn.png");
@@ -518,7 +518,7 @@ time {
   width:100%;
   box-shadow:0 0 1px #000;
   background-color:#fff;
-  height: 100px;
+  height: 60px;
 }
 
 .input-box .input {
