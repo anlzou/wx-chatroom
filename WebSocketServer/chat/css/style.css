@@ -404,8 +404,8 @@ header {
 
   font-weight:normal;
 	font-size:14px;
-	color:#f60;
-	 max-width: 100px;
+	color:#999999;
+	 max-width: 140px;
     height: 36px;
 	overflow: hidden;
 	float: right;
@@ -417,7 +417,7 @@ header {
   font-weight:700;
 }
 .service>span{
-    max-width: 100px;
+    max-width: 140px;
     height: 36px;
 	/*
     background: url("https://i.alipayobjects.com/i/ecmng/png/201404/2O35FCjByn.png");
