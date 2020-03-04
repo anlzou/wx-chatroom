@@ -43,6 +43,7 @@
 		genUid: function() {
 			return new Date().getTime() + "" + Math.floor(Math.random() * 899 + 100);
 		},
+
 		//更新系统消息，本例中在用户加入、退出的时候调用
 		updateSysMsg: function(o, action) {
 			//当前在线用户列表
@@ -67,7 +68,14 @@
 			var html = '';
 			html += '<div class="msg-system">';
 			html += user.username;
-			html += (action == 'login') ? ' 加入了聊天室' : ' 退出了聊天室';
+			html += (action == 'login') ? ' 加入了聊天室 ' : ' 退出了聊天室 ';
+
+			//anlzou:今天的时间
+			var date = new Date();
+			var seperator2 = ":";
+			var currentdate = date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
+
+			html += currentdate;
 			html += '</div>';
 			var section = d.createElement('section');
 			section.className = 'system J-mjrlinkWrap J-cutMsg';
@@ -75,6 +83,7 @@
 			this.msgObj.appendChild(section);
 			this.scrollToBottom();
 		},
+
 		//第一个界面用户提交用户名
 		usernameSubmit: function() {
 			var username = d.getElementById("username").value;
@@ -94,7 +103,7 @@
 			*/
 			this.userid = this.genUid();
 			//this.userid = this.username;
-			this.username = username+"："+this.userid;
+			this.username = username + "：" + this.userid;
 
 			d.getElementById("showusername").innerHTML = this.username;
 			//this.msgObj.style.minHeight = (this.screenheight - db.clientHeight + this.msgObj.clientHeight) + "px";
@@ -122,22 +131,26 @@
 
 			//监听消息发送
 			this.socket.on('message', function(obj) {
+				//anlzou:今天的时间
+				var date = new Date();
+				var seperator2 = ":";
+				var currentdate = date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
+
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var contentDiv = '<div>' + obj.content + '</div>';
-				var usernameDiv = '<span>' + obj.username + '</span>';
+				var usernameDiv = '<span>' + obj.username + " " + currentdate + '</span>';
 
 				var section = d.createElement('section');
-				if (isme) {
+				if (isme) { //发送端
 					section.className = 'user';
 					section.innerHTML = contentDiv + usernameDiv;
-				} else {
+				} else { //接收端
 					section.className = 'service';
 					section.innerHTML = usernameDiv + contentDiv;
 				}
 				CHAT.msgObj.appendChild(section);
 				CHAT.scrollToBottom();
 			});
-
 		}
 	};
 	//通过“回车”提交用户名
