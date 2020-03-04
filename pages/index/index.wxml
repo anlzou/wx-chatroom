@@ -39,8 +39,8 @@
 							<view class="username">{{item.username}}</view>
 							<view class="content">{{item.content}}</view>
 						</view>
-						<view class="msg-system" wx:if="{{item.type == 'login'}}">{{item.user.username}}加入了聊天室</view>
-						<view class="msg-system" wx:if="{{item.type == 'logout'}}">{{item.user.username}}退出了聊天室</view>
+						<view class="msg-system" wx:if="{{item.type == 'login'}}">{{item.user.username}} 加入了聊天室</view>
+						<view class="msg-system" wx:if="{{item.type == 'logout'}}">{{item.user.username}} 退出了聊天室</view>
 					</view>
 				</scroll-view>
 			</view>
