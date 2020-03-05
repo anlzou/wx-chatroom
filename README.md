@@ -42,7 +42,7 @@ npm install
 
 # 运行
 1. 克隆代码到本地后，进入WebSocketServer目录执行node index.js。
-2. 使用 “微信开发者工具” 将 weapp_demo 目录打开，运行调试即可。
+2. 使用 “微信开发者工具” 将 pages/index 目录打开，运行调试即可。
 3. 浏览器可以访问WebSocketServer/chat目录中index.html文件。
 4. 运行demo图		
 ![app-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-登录界面.PNG)
