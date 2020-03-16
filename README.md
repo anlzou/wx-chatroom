@@ -71,6 +71,18 @@ anlzou
 
 # 更新日志
 ## V1.0.0 版本，2020-3-2
-1. 新功能：
-2. 新功能：
-3. 修改：
+1. 功能开发
+- [x] [修改web登录界面样式](http://sc.chinaz.com/jiaoben/161019322210.htm#down)
+- [x] [修改app登录界面样式](https://blog.csdn.net/W_SSNY/article/details/80431695?depth_1-utm_source=distribute.pc_relevant.none-task&utm_source=distribute.pc_relevant.none-task)
+- [x] 修改聊天界面的排版
+- [x] 修改用户uid显示
+- [x] 添加聊天时间
+- [x] 修改目录结构
+- [x] 替换图片
+- [x] 修改相同用户名也可以登录问题
+2. 待做
+- [ ] 头像
+- [ ] 发送图片
+- [ ] 添加密码
+- [ ] 添加数据库
+- [ ] 后台管理
