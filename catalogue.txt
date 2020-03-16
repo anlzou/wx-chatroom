@@ -1,55 +1,52 @@
 # 目录 
 
 .
-│  .gitignore			//git忽略文件配置
-│  app.js				//是小程序的初始化脚本，可以在这个文件中监听小程序的生命周期，申请全局变量和调用API等
-│  app.json				//是对小程序的全局配置，pages设置页面路径组成（默认第一条为首页），window设置默认页面的窗口表现等
-│  app.wxss				//是整个小程序的公共样式表。类似网站开发中的common.css
-│  catalogue.txt		//项目的文件结构
-│  package-lock.json	//是在`npm install`时候生成一份文件,用来记录当前状态下实际安装的各个npm package的具体来源和版本号。
-│  project.config.json	//在开发者工具上做的任何配置都会写入到这个文件，当重新安装工具或者换电脑工作时，只要载入同一个项目的代码包，开发者工具就自动会帮你恢复到当时你开发项目时的个性化配置，其中会包括编辑器的颜色、代码上传时自动压缩等等一系列选项。
-│  README.md			//帮助文档
-│  sitemap.json			//用于配置小程序及其页面是否允许被微信索引
+│  .gitignore				//git忽略文件配置
+│  app.js					//是小程序的初始化脚本，可以在这个文件中监听小程序的生命周期，申请全局变量和调用API等
+│  app.json					//是对小程序的全局配置，pages设置页面路径组成（默认第一条为首页），window设置默认页面的窗口表现等
+│  app.wxss					//是整个小程序的公共样式表。类似网站开发中的common.css
+│  catalogue.txt			//项目的文件结构
+│  package-lock.json		//是在`npm install`时候生成一份文件,用来记录当前状态下实际安装的各个npm package的具体来源和版本号。
+│  project.config.json		//在开发者工具上做的任何配置都会写入到这个文件，当重新安装工具或者换电脑工作时，只要载入同一个项目的代码包，开发者工具就自动会帮你恢复到当时你开发项目时的个性化配置，其中会包括编辑器的颜色、代码上传时自动压缩等等一系列选项。
+│  README.md				//帮助文档
+│  sitemap.json				//用于配置小程序及其页面是否允许被微信索引
 │      
-├─image					//项目截图
+├─image						//项目截图
 │      app-登录界面.PNG
 │      app-聊天界面.PNG
 │      web-登录界面.PNG
 │      web-聊天界面.PNG
 │      
-├─pages					//微信小程序具体的页面
+├─pages						//微信小程序具体的页面
 │  ├─index
-│  │      index.js		//index的页面逻辑
-│  │      index.json	//index的页面配置
-│  │      index.wxml	//index页面
-│  │      index.wxss	//index页面样式
+│  │      index.js			//index的页面逻辑
+│  │      index.json		//index的页面配置
+│  │      index.wxml		//index页面
+│  │      index.wxss		//index页面样式
 │  │      
-│  └─logs				//小程序运行日志
+│  └─logs					//小程序运行日志
 │          logs.js
 │          logs.json
 │          logs.wxml
 │          logs.wxss
-│          
-├─utils					
-│      util.js
 │      
-├─WebSocketServer		//Web端
-│  │  index.js			//启动文件
+├─WebSocketServer			//Web端
+│  │  index.js				//启动文件
 │  │  npm-debug.log
 │  │  package.json
 │  │  
 │  ├─chat				
-│  │  │  client.js		//客户端监听程序
+│  │  │  client.js			//客户端监听程序
 │  │  │  index.html
 │  │  │  
-│  │  ├─css				//页面配置
+│  │  ├─css					//页面配置
 │  │  │      bootstrap.min.css
 │  │  │      demo.css
 │  │  │      font-awesome.min.css
 │  │  │      login_style.css
 │  │  │      style.css
 │  │  │      
-│  │  ├─fonts			//字体
+│  │  ├─fonts				//字体
 │  │  │      fontawesome-webfont.eot
 │  │  │      fontawesome-webfont.svg
 │  │  │      fontawesome-webfont.ttf
@@ -60,13 +57,12 @@
 │  │  │      glyphicons-halflings-regular.ttf
 │  │  │      glyphicons-halflings-regular.woff
 │  │  │      
-│  │  └─js				//javascript库
+│  │  └─js					//javascript库
 │  │          bootstrap.js
 │  │          jquery-3.2.1.js
 │  │          json3.min.js
-│  │          main.js
 │  │          
-│  └─node_modules		//npm install下载的模块
-│   		...         //下载的包
+│  └─node_modules			//npm install下载的模块
+│   		...         	//下载的包
 └─wxsocket.io
-        index.js		//sockio.io包，简版
+        index.js			//sockio.io包，微信小程序版
