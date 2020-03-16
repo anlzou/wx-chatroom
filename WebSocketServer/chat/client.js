@@ -87,7 +87,7 @@
 			var date = new Date();
 			var seperator2 = ":";
 			var currentdate = date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
-
+			
 			html += currentdate;
 			html += '</div>';
 			var section = d.createElement('section');
@@ -118,8 +118,8 @@
 			//this.userid = this.username;
 			this.username = username + "：" + this.userid;
 			
-			//anlzou
-			var uid = this.username;
+			//anlzou：uid是全局变量
+			var uid = this.userid;
 			//anlzou:根据uid设置头像,0-9
 			UserHead[uid] = imgs[Math.floor(Math.random()*10)];
 			//console.log(imgs[Math.floor(Math.random()*10)+1]);
@@ -157,9 +157,10 @@
 
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var contentDiv = '<div>' + obj.content + '</div>';
+
 				//anlzou:头像
 				var UserHeadImg = UserHead[uid];
-
+				
 				var usernameDiv = '<span>' + obj.username + " " + currentdate + '</span>';
 				var section = d.createElement('section');
 				if (isme) { //发送端
