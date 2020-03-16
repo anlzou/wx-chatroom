@@ -49,6 +49,7 @@ npm install
 ![app-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/app-聊天界面.PNG)
 ![web-登录界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-登录界面.PNG)
 ![web-聊天界面](https://github.com/anlzou/wxchatroom/tree/master/image/web-聊天界面.PNG)
+![test](https://github.com/anlzou/wxchatroom/tree/dev/image/test.JPG)
 
 # 使用到的框架
 1. socket.io - 通信框架
