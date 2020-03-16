@@ -311,6 +311,13 @@
  .message section a {
  	/*white-space:nowrap*/
  }
+ 
+/* section.user>img{
+ 	anlzou:头像
+	width: 50px;
+	height: 50px;
+	src: uurl('https://avataaars.io/?avatarStyle=Circle&topType=Turban&accessoriesType=Wayfarers&hatColor=Blue03&hairColor=SilverGray&facialHairType=MoustacheMagnum&facialHairColor=BlondeGolden&clotheType=BlazerShirt&clotheColor=Heather&eyeType=Wink&eyebrowType=RaisedExcitedNatural&mouthType=Grimace&skinColor=Brown');
+ } */
 
  .message:after {
  	display: block;

@@ -1,5 +1,4 @@
 //客户端程序
-
 (function() {
 	var d = document,
 		w = window,
@@ -9,7 +8,21 @@
 		dc = d.compatMode == 'CSS1Compat',
 		dx = dc ? dd : db,
 		ec = encodeURIComponent;
-
+		//anlzou:头像列表json
+		var imgs = new Array();
+		imgs[0] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (0).png"></img>';
+		imgs[1] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (1).png"></img>';
+		imgs[2] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (2).png"></img>';
+		imgs[3] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (3).png"></img>';
+		imgs[4] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (4).png"></img>';
+		imgs[5] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (5).png"></img>';
+		imgs[6] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (6).png"></img>';
+		imgs[7] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (7).png"></img>';
+		imgs[8] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (8).png"></img>';
+		imgs[9] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (9).png"></img>';
+		//imgs[10] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (10).png"></img>';
+		//使用json
+		var UserHead = {};
 
 	w.CHAT = {
 		msgObj: d.getElementById("message"),
@@ -56,7 +69,7 @@
 			var userhtml = '';
 			var separator = '';
 			for (key in onlineUsers) {
-				console.log(onlineUsers.hasOwnProperty(key))
+				//console.log(onlineUsers.hasOwnProperty(key))
 				if (onlineUsers.hasOwnProperty(key)) {
 					userhtml += separator + onlineUsers[key];
 					separator = '、';
@@ -104,6 +117,12 @@
 			this.userid = this.genUid();
 			//this.userid = this.username;
 			this.username = username + "：" + this.userid;
+			
+			//anlzou
+			var uid = this.username;
+			//anlzou:根据uid设置头像,0-9
+			UserHead[uid] = imgs[Math.floor(Math.random()*10)];
+			//console.log(imgs[Math.floor(Math.random()*10)+1]);
 
 			d.getElementById("showusername").innerHTML = this.username;
 			//this.msgObj.style.minHeight = (this.screenheight - db.clientHeight + this.msgObj.clientHeight) + "px";
@@ -111,7 +130,7 @@
 
 			//连接websocket后端服务器
 			this.socket = io.connect('http://127.0.0.1:3000');
-			console.log(this.socket)
+			//console.log(this.socket)
 			//告诉服务器端有用户登录
 			this.socket.emit('login', {
 				userid: this.userid,
@@ -120,7 +139,7 @@
 
 			//监听新用户登录
 			this.socket.on('userlogin', function(o) {
-				console.log(112)
+				//console.log(112)
 				CHAT.updateSysMsg(o, 'login');
 			});
 
@@ -138,15 +157,17 @@
 
 				var isme = (obj.userid == CHAT.userid) ? true : false;
 				var contentDiv = '<div>' + obj.content + '</div>';
-				var usernameDiv = '<span>' + obj.username + " " + currentdate + '</span>';
+				//anlzou:头像
+				var UserHeadImg = UserHead[uid];
 
+				var usernameDiv = '<span>' + obj.username + " " + currentdate + '</span>';
 				var section = d.createElement('section');
 				if (isme) { //发送端
 					section.className = 'user';
-					section.innerHTML = contentDiv + usernameDiv;
+					section.innerHTML = contentDiv + UserHeadImg + usernameDiv;
 				} else { //接收端
 					section.className = 'service';
-					section.innerHTML = usernameDiv + contentDiv;
+					section.innerHTML = usernameDiv + UserHeadImg + contentDiv;
 				}
 				CHAT.msgObj.appendChild(section);
 				CHAT.scrollToBottom();
