@@ -23,6 +23,7 @@
 		//imgs[10] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (10).png"></img>';
 		//使用json
 		var UserHead = {};
+		var UserHead = new Object();
 
 	w.CHAT = {
 		msgObj: d.getElementById("message"),
@@ -120,7 +121,7 @@
 			
 			//anlzou：uid是全局变量
 			var uid = this.userid;
-			//anlzou:根据uid设置头像,0-9
+			//anlzou:根据uid设置头像,随机0-9
 			UserHead[uid] = imgs[Math.floor(Math.random()*10)];
 			//console.log(imgs[Math.floor(Math.random()*10)+1]);
 
