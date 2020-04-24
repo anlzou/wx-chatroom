@@ -167,9 +167,10 @@
 				if (isme) { //发送端
 					section.className = 'user';
 					section.innerHTML = contentDiv + UserHeadImg + usernameDiv;
+					overall_uid = uid;
 				} else { //接收端
 					section.className = 'service';
-					section.innerHTML = usernameDiv + UserHeadImg + contentDiv;
+					section.innerHTML = usernameDiv + UserHead[overall_uid] + contentDiv;
 				}
 				CHAT.msgObj.appendChild(section);
 				CHAT.scrollToBottom();
@@ -191,3 +192,5 @@
 		}
 	};
 })();
+
+var overall_uid;
