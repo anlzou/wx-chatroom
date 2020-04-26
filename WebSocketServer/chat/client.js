@@ -1,5 +1,5 @@
 //客户端程序
-(function() {
+(function () {
 	var d = document,
 		w = window,
 		p = parseInt,
@@ -8,22 +8,22 @@
 		dc = d.compatMode == 'CSS1Compat',
 		dx = dc ? dd : db,
 		ec = encodeURIComponent;
-		//anlzou:头像列表json
-		var imgs = new Array();
-		imgs[0] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (0).png"></img>';
-		imgs[1] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (1).png"></img>';
-		imgs[2] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (2).png"></img>';
-		imgs[3] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (3).png"></img>';
-		imgs[4] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (4).png"></img>';
-		imgs[5] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (5).png"></img>';
-		imgs[6] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (6).png"></img>';
-		imgs[7] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (7).png"></img>';
-		imgs[8] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (8).png"></img>';
-		imgs[9] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (9).png"></img>';
-		//imgs[10] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (10).png"></img>';
-		//使用json
-		var UserHead = {};
-		var UserHead = new Object();
+	//anlzou:头像列表json
+	var imgs = new Array();
+	imgs[0] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (0).png"></img>';
+	imgs[1] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (1).png"></img>';
+	imgs[2] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (2).png"></img>';
+	imgs[3] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (3).png"></img>';
+	imgs[4] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (4).png"></img>';
+	imgs[5] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (5).png"></img>';
+	imgs[6] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (6).png"></img>';
+	imgs[7] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (7).png"></img>';
+	imgs[8] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (8).png"></img>';
+	imgs[9] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (9).png"></img>';
+	//imgs[10] = '<img widht="50px" height="50px" src="../../image/headImg/avataaars (10).png"></img>';
+	//使用json
+	window.UserHead = {};
+	// var UserHead = new Object();
 
 	w.CHAT = {
 		msgObj: d.getElementById("message"),
@@ -32,16 +32,16 @@
 		userid: null,
 		socket: null,
 		//让浏览器滚动条保持在最低部
-		scrollToBottom: function() {
+		scrollToBottom: function () {
 			w.scrollTo(0, this.msgObj.clientHeight);
 		},
 		//退出，本例只是一个简单的刷新
-		logout: function() {
+		logout: function () {
 			//this.socket.disconnect();
 			location.reload();
 		},
 		//提交聊天消息内容
-		submit: function() {
+		submit: function () {
 			var content = d.getElementById("content").value;
 			if (content != '') {
 				var obj = {
@@ -54,16 +54,35 @@
 			}
 			return false;
 		},
-		genUid: function() {
+		genUid: function () {
 			return new Date().getTime() + "" + Math.floor(Math.random() * 899 + 100);
 		},
 
 		//更新系统消息，本例中在用户加入、退出的时候调用
-		updateSysMsg: function(o, action) {
-			//当前在线用户列表
-			var onlineUsers = o.onlineUsers;
+		updateSysMsg: function (o, action) {
 			//当前在线人数
 			var onlineCount = o.onlineCount;
+			// console.log(onlineCount);
+			//使用json
+			// window.UserHead = ;
+			//当前在线用户列表
+			var onlineUsers = o.onlineUsers;
+			// console.log(onlineUsers);
+			// window.xx = onlineCount;
+			for (key in onlineUsers) {
+				// console.log(key);
+				if (!window.UserHead.hasOwnProperty(key)) {
+					// window.UserHead[key] = imgs[Math.floor(Math.random() * 10)];
+					window.UserHead[key] = imgs[window.sum];
+					window.sum = window.sum + 1;
+					// xx = xx - 1;
+				}
+			}
+			// console.log(window.UserHead);
+
+			// window.UserHead = onlineUsers;
+			// console.log(window.UserHead);
+
 			//新加入用户的信息
 			var user = o.user;
 			//更新在线人数
@@ -88,7 +107,7 @@
 			var date = new Date();
 			var seperator2 = ":";
 			var currentdate = date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
-			
+
 			html += currentdate;
 			html += '</div>';
 			var section = d.createElement('section');
@@ -99,7 +118,7 @@
 		},
 
 		//第一个界面用户提交用户名
-		usernameSubmit: function() {
+		usernameSubmit: function () {
 			var username = d.getElementById("username").value;
 
 			if (username != "") {
@@ -110,7 +129,7 @@
 			}
 			return false;
 		},
-		init: function(username) {
+		init: function (username) {
 			/*
 			客户端根据时间和随机数生成uid,这样使得聊天室用户名称可以重复。
 			实际项目中，如果是需要用户登录，那么直接采用用户的uid来做标识就可以
@@ -118,11 +137,14 @@
 			this.userid = this.genUid();
 			//this.userid = this.username;
 			this.username = username + "：" + this.userid;
-			
+
 			//anlzou：uid是全局变量
 			var uid = this.userid;
 			//anlzou:根据uid设置头像,随机0-9
-			UserHead[uid] = imgs[Math.floor(Math.random()*10)];
+			// window.UserHead[uid] = imgs[Math.floor(Math.random() * 10)];
+			// console.log(window.UserHead);
+			// overall_uid[uid] = imgs[Math.floor(Math.random() * 10)];
+			// console.log(overall_uid);
 			//console.log(imgs[Math.floor(Math.random()*10)+1]);
 
 			d.getElementById("showusername").innerHTML = this.username;
@@ -139,18 +161,18 @@
 			});
 
 			//监听新用户登录
-			this.socket.on('userlogin', function(o) {
+			this.socket.on('userlogin', function (o) {
 				//console.log(112)
 				CHAT.updateSysMsg(o, 'login');
 			});
 
 			//监听用户退出
-			this.socket.on('logout', function(o) {
+			this.socket.on('logout', function (o) {
 				CHAT.updateSysMsg(o, 'logout');
 			});
 
 			//监听消息发送
-			this.socket.on('message', function(obj) {
+			this.socket.on('message', function (obj) {
 				//anlzou:今天的时间
 				var date = new Date();
 				var seperator2 = ":";
@@ -160,17 +182,19 @@
 				var contentDiv = '<div>' + obj.content + '</div>';
 
 				//anlzou:头像
-				var UserHeadImg = UserHead[uid];
-				
+				var UserHeadImg = window.UserHead[obj.userid];
+				// console.log(obj.userid);
+				// console.log(UserHeadImg);
+
 				var usernameDiv = '<span>' + obj.username + " " + currentdate + '</span>';
 				var section = d.createElement('section');
 				if (isme) { //发送端
 					section.className = 'user';
 					section.innerHTML = contentDiv + UserHeadImg + usernameDiv;
-					overall_uid = uid;
 				} else { //接收端
+					// UserHeadImg = window.UserHead[CHAT.userid];
 					section.className = 'service';
-					section.innerHTML = usernameDiv + UserHead[overall_uid] + contentDiv;
+					section.innerHTML = usernameDiv + UserHeadImg + contentDiv;
 				}
 				CHAT.msgObj.appendChild(section);
 				CHAT.scrollToBottom();
@@ -178,14 +202,14 @@
 		}
 	};
 	//通过“回车”提交用户名
-	d.getElementById("username").onkeydown = function(e) {
+	d.getElementById("username").onkeydown = function (e) {
 		e = e || event;
 		if (e.keyCode === 13) {
 			CHAT.usernameSubmit();
 		}
 	};
 	//通过“回车”提交信息
-	d.getElementById("content").onkeydown = function(e) {
+	d.getElementById("content").onkeydown = function (e) {
 		e = e || event;
 		if (e.keyCode === 13) {
 			CHAT.submit();
@@ -193,4 +217,5 @@
 	};
 })();
 
-var overall_uid;
+window.sum = 0;
+// window.overall_uid = {};

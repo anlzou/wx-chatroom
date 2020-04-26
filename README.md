@@ -1,3 +1,13 @@
+
+
+<!--
+ * @Date        : 2020-03-02 15:02:35
+ * @LastEditors : anlzou
+ * @Github      : https://github.com/anlzou
+ * @LastEditTime: 2020-04-26 15:00:58
+ * @FilePath    : \wxchatroom\README.md
+ * @Describe    : 
+ -->
 # wxchatroom
 <!-- GFM-TOC -->
 - [介绍](#介绍)
@@ -80,8 +90,9 @@ anlzou
 - [x] 修改目录结构
 - [x] 替换图片
 - [x] 修改相同用户名也可以登录问题
-- [x] 头像
-2. 待做
+- [ ] 头像
+  - 存在减用户后增同步问题，既只能增加
+1. 待做
 - [ ] 发送图片
 - [ ] 添加密码
 - [ ] 添加数据库
